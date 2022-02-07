@@ -1,0 +1,17 @@
+enableFeaturePreview('VERSION_CATALOGS')
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    versionCatalogs {
+        deps {
+            from(files("${rootDir}/versions.toml"))
+        }
+    }
+}
+rootProject.name = "ak"
+include ':sample'
+include ':library'

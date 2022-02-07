@@ -1,0 +1,3 @@
+# https://github.com/pinterest/ktlint#custom-editorconfig-properties
+[*.{kt, kts}]
+disabled_rules = parameter-list-wrapping, indent, no-wildcard-imports, comment-spacing, chain-wrapping #,import-ordering, max-line-length
