@@ -10,6 +10,11 @@ import com.y4n9b0.ak.*
 import com.y4n9b0.fp.y
 
 class MainActivity : AppCompatActivity() {
+
+    private val viewModel by argViewModels<FooViewModel>(2, true, "haha")
+//     private val args: Array<Any> = arrayOf(2, true, "haha", "hoho")
+//     private val viewModel by argViewModels<FooViewModel>(*args)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -53,6 +58,9 @@ class MainActivity : AppCompatActivity() {
 
         addAll(2, 3, 1, 60, 4, -7)
         factorial(10)
+
+        viewModel.liveData.observe(this) { toast(it) }
+        viewModel.liveData.postValue("666")
     }
 
     private fun addAll(vararg args: Int): Int {

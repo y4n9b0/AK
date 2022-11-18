@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation deps.core.ktx
+    api deps.bundles.ktx
     api deps.bundles.coroutine
     api deps.bundles.lifecycle
     testImplementation 'junit:junit:4.13.2'

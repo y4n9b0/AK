@@ -38,7 +38,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ['*.jar', '*.aar'])
     implementation project(':library')
 //    implementation 'com.github.y4n9b0:ak:0.0.1'
-    implementation deps.core.ktx
+    implementation deps.bundles.ktx
     implementation deps.bundles.coroutine
     implementation deps.bundles.lifecycle
     implementation deps.appcompat
