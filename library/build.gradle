@@ -50,6 +50,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
+ext {
+    POM_ARTIFACT_ID = "ak"
+    POM_VERSION_NAME = "0.0.1"
+}
+
 apply from: "${rootDir}/flatDeps.gradle"
 apply from: "${rootDir}/ktlint.gradle"
 apply from: "${rootDir}/mvn-publish.gradle"

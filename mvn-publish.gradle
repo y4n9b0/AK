@@ -11,8 +11,9 @@ afterEvaluate {
             akx(MavenPublication) {
                 from components.release
                 groupId = 'com.github.y4n9b0'
-                artifactId = 'ak'
-                version = '0.0.1'
+                // lib module build.gradle ext property
+                artifactId = POM_ARTIFACT_ID
+                version = POM_VERSION_NAME
             }
         }
     }
